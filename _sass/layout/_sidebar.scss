@@ -1,0 +1,286 @@
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+/*
+   Default
+   ========================================================================== */
+
+.sidebar {
+  -webkit-transform: translate3d(0, 0 , 0);
+          transform: translate3d(0, 0 , 0);
+
+  @include clearfix();
+  margin-bottom: 1em;
+
+  @media (orientation: portrait) {
+    margin-top: 1em;
+  }
+
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    height: 100vh;
+    overflow-y: auto;               // Add scrollbar if the sidebar is too long
+    position: fixed;
+    padding-top: $masthead-height;
+  }
+
+  @include breakpoint($large) {
+    @include span(2 of 12);
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @include breakpoint($x-large) {
+    max-width: $sidebar-link-max-width;
+    padding-right: 0;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    font-family: $sans-serif-narrow;
+  }
+
+  h3, h4 {
+    font-size: $type-size-5;
+  }
+
+  p, li {
+    font-family: $sans-serif;
+    font-size: $type-size-6;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.sidebar__right {
+  margin-bottom: 1em;
+
+  @include breakpoint($large) {
+    position: relative;
+    float: right;
+    width: $right-sidebar-width-narrow;
+    margin-left: span(0.5 of 12);
+    z-index: 10;
+  }
+
+  @include breakpoint($x-large) {
+    width: $right-sidebar-width;
+  }
+}
+
+/*
+   Author profile and links
+   ========================================================================== */
+
+.author__avatar {
+  /* Change display to block to stack it vertically */
+  display: block;
+  vertical-align: top;
+  /* Set a larger, fixed width and center it */
+  width: 210px;
+  margin: 0 auto 1em; /* 0 for top/bottom, auto for left/right centers it */
+
+  @include breakpoint($large) {
+    display: block;
+    width: auto;
+    height: auto;
+    /* Reset margin for desktop view if needed */
+    margin: 0;
+  }
+
+  img {
+    max-width: 200px;
+    border-radius: 50%;
+
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid var(--global-border-color);
+    }
+  }
+}
+
+.author__content {
+  /* Change display to block to stack it */
+  display: block;
+  vertical-align: top;
+  /* Remove side padding and center the text */
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  line-height: 1;
+
+  @include breakpoint($large) {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    /* Reset text alignment for desktop */
+    text-align: left;
+  }
+}
+
+.author__name {
+  margin: 0;
+
+  @include breakpoint($large) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.sidebar .author__name {
+  font-family: $sans-serif;
+  font-size: $type-size-5;
+}
+
+.sidebar .author__desktop {
+  display: none;
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.author__pronouns {
+  margin: 0;
+
+  @include breakpoint($large) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.author__bio {
+  margin: 0;
+
+  @include breakpoint($large) {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.author__urls-wrapper {
+  position: relative;
+  /* NEW: Change to block to allow centering */
+  display: block;
+  vertical-align: middle;
+  font-family: $sans-serif;
+  z-index: 10;
+  position: relative;
+  cursor: pointer;
+
+  li:last-child {
+    a {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint($large) {
+    display: block;
+  }
+
+  button {
+    /* Hide the button on ALL screen sizes */
+    display: none;
+  }
+}
+
+.author__urls {
+  /* Make the list visible and stack vertically */
+  display: block;
+  position: static;
+  margin-top: 1.5em;
+  padding: 0;
+  list-style-type: none;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: default;
+  /* Center the inline-block icons on mobile */
+  text-align: center;
+
+  @include breakpoint($large) {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    /* Reset text alignment for desktop */
+    text-align: left;
+  }
+
+  &:before {
+    /* Hide the arrow on all screen sizes */
+    display: none;
+  }
+
+  &:after {
+    /* Hide the arrow on all screen sizes */
+    display: none;
+  }
+
+  li {
+    white-space: nowrap;
+    /* Make icons appear in a row on mobile */
+    display: inline-block;
+
+    /* FINAL FIX: Remove outer padding on first/last icons for true centering */
+    &:first-child a {
+      padding-left: 0;
+    }
+    &:last-child a {
+      padding-right: 0;
+    }
+
+    @include breakpoint($large) {
+      /* Reset for desktop to be a vertical list */
+      display: block;
+
+      /* Reset padding for desktop view */
+      &:first-child a,
+      &:last-child a {
+        padding-left: 0;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px 8px;
+    /* Hide link text on mobile */
+    font-size: 0;
+    text-decoration: none;
+    /* FIX: Set a default color for links */
+    color: var(--link-color);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include breakpoint($large) {
+      /* Reset font-size for desktop to show text */
+      font-size: $type-size-5;
+      padding: 2px 5px 2px 0;
+    }
+
+    /* Target icons to make them visible and larger on mobile */
+    i {
+      font-size: 1.35rem; /* Adjust this value to your liking */
+
+      @include breakpoint($large) {
+        /* Reset icon font size for desktop */
+        font-size: inherit;
+      }
+    }
+  }
+}
