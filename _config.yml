@@ -150,7 +150,9 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  #provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider: cloudflare
+  cloudflare_token: 17a0c82a40d045eaa2475efc49882a8e
   google:
     tracking_id          :
 
