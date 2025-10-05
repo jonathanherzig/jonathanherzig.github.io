@@ -1,4 +1,9 @@
 - venue: "arXiv 2025"
+  title: "ManagerBench: Evaluating the Safety-Pragmatism Trade-off in Autonomous LLMs"
+  authors: "Adi Simhi, <u>Jonathan Herzig</u>, Martin Tutek, Itay Itzhak, Idan Szpektor, Yonatan Belinkov"
+  pdf: "https://arxiv.org/abs/2510.00857"
+
+- venue: "arXiv 2025"
   title: "Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities"
   authors: "Gemini Team, ..., <u>Jonathan Herzig</u> and others"
   pdf: "https://arxiv.org/pdf/2507.06261"
