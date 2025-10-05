@@ -2,6 +2,7 @@
   title: "ManagerBench: Evaluating the Safety-Pragmatism Trade-off in Autonomous LLMs"
   authors: "Adi Simhi, <u>Jonathan Herzig</u>, Martin Tutek, Itay Itzhak, Idan Szpektor, Yonatan Belinkov"
   pdf: "https://arxiv.org/abs/2510.00857"
+  github: "https://github.com/technion-cs-nlp/ManagerBench"
 
 - venue: "arXiv 2025"
   title: "Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities"
