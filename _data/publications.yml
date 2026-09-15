@@ -29,6 +29,11 @@
   authors: "Zorik Gekhman, Eyal Ben David, Hadas Orgad, Eran Ofek, Yonatan Belinkov, Idan Szpektor, <u>Jonathan Herzig</u>, Roi Reichart"
   pdf: "https://arxiv.org/pdf/2503.15299"
 
+- venue: "Findings of IJCNLP-AACL 2025"
+  title: "DoubleDipper: Recycling Contexts for Efficient and Attributed In-Context Learning"
+  authors: "Arie Cattan, Alon Jacovi, Alex Fabrikant, <u>Jonathan Herzig</u>, Roee Aharoni, Hannah Rashkin, Dror Marcus, Avinatan Hassidim, Yossi Matias, Idan Szpektor, Avi Caciularu"
+  pdf: "https://aclanthology.org/2025.findings-ijcnlp.42.pdf"
+
 - venue: "arXiv 2025"
   title: "DRAGged into Conflicts: Detecting and Addressing Conflicting Sources in Search-Augmented LLMs"
   authors: "Arie Cattan, Alon Jacovi, Ori Ram, <u>Jonathan Herzig</u>, Roee Aharoni, Sasha Goldshtein, Eran Ofek, Idan Szpektor, Avi Caciularu"
@@ -68,11 +73,6 @@
   authors: "Shashwat Singh, Shauli Ravfogel, <u>Jonathan Herzig</u>, Roee Aharoni, Ryan Cotterell, Ponnurangam Kumaraguru"
   pdf: "https://arxiv.org/pdf/2402.09631"
   github: "https://github.com/shauli-ravfogel/affine-steering"
-
-- venue: "arXiv 2024"
-  title: "Can few-shot work in long-context? recycling the context to generate demonstrations"
-  authors: "Arie Cattan, Alon Jacovi, Alex Fabrikant, <u>Jonathan Herzig</u>, Roee Aharoni, Hannah Rashkin, Dror Marcus, Avinatan Hassidim, Yossi Matias, Idan Szpektor, Avi Caciularu"
-  pdf: "https://arxiv.org/pdf/2406.13632?"
 
 - venue: "arXiv 2024"
   title: "Distinguishing ignorance from error in llm hallucinations"
